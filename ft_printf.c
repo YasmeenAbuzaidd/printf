@@ -60,6 +60,10 @@ int ft_type(va_list args, char type)
         free(str);
         return (num);
     }
+    else if (type == 'p')
+    {
+        
+    }
     return (0);
 }
 
