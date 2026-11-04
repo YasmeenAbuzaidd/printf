@@ -38,6 +38,7 @@ int ft_type(va_list args, char type)
 {
     char    *str;
     int     num;
+    int     hex;
 
     if (type == 'c')
     {
@@ -59,6 +60,10 @@ int ft_type(va_list args, char type)
         num = string_fun(str);
         free(str);
         return (num);
+    }
+    else if (type == 'x')
+    {
+        hex = ft_hex(va_arg(args,unsigned int));
     }
     return (0);
 }

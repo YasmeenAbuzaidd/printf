@@ -18,5 +18,6 @@
 
 int	ft_printf(const char *format, ...);
 char    *ft_utoa(unsigned int n);
+int ft_hex(unsigned int x)
 
 #endif
