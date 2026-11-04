@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-void    print_fun(char c)
+static void    print_fun(char c)
 {
     write(1, &c, 1);
 }
@@ -34,11 +34,11 @@ int    string_fun(char *c)
     }
     return (i);
 }
-int ft_type(va_list args, char type)
+static int ft_type(va_list args, char type)
 {
     char    *str;
+    void    *ptr;
     int     num;
-    int     hex;
 
     if (type == 'c')
     {
@@ -47,6 +47,13 @@ int ft_type(va_list args, char type)
     }
     else if (type == 's')
         return (string_fun(va_arg(args ,char *)));
+    else if (type == 'p')
+    {
+        ptr = va_arg(args, void *);
+        if (ptr == NULL)
+            return (string_fun("(Nil)"));
+        return (string_fun(ptr));
+    }
     else if (type == 'd' || type == 'i')
     {
         str = ft_itoa(va_arg(args,int));
@@ -61,9 +68,14 @@ int ft_type(va_list args, char type)
         free(str);
         return (num);
     }
-    else if (type == 'x')
+    else if (type == 'x' || type =='X')
     {
-        hex = ft_hex(va_arg(args,unsigned int));
+        str = ft_hex(va_arg(args, unsigned int), type);\
+        if (!str)
+            return (-1);
+        num = string_fun (str);
+        free (str);
+        return (num);
     }
     return (0);
 }
@@ -76,12 +88,16 @@ int ft_printf(const char *str, ...)
 
     i = 0;
     count = 0;
+    if (str == NULL)
+        return (-1);
     va_start(args,str);
     while (str[i])
     {
         if (str[i] == '%')
         {
             i++;
+            if (str[i] == '\0')
+                break ;
             if (str[i] == '%')
             {
                 write(1, "%", 1);
