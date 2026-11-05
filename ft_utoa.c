@@ -30,16 +30,16 @@ static int	length(unsigned int num)
 
 char	*ft_utoa(unsigned int n)
 {
-	int		        len;
+	int				len;
 	unsigned int	num;
-	char	        *s;
+	char			*s;
 
 	num = n;
 	len = length(n);
 	s = malloc((len + 1) * sizeof(char));
 	if (s == NULL)
 		return (NULL);
-    s[len] = '\0';
+	s[len] = '\0';
 	while (len--)
 	{
 		s[len] = (num % 10) + '0';

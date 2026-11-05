@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-static int hex_length(unsigned int num)
+static int  hex_length(unsigned int num)
 {
-    int len;
+    int     len;
 
     len = 0;
     if (num == 0)
