@@ -59,12 +59,7 @@ static	int	ft_type(va_list args, char type)
 		return (num);
 	}
 	else if (type == 'u')
-	{
-		str = ft_utoa(va_arg(args, unsigned int));
-		num = string_fun(str);
-		free(str);
-		return (num);
-	}
+	return (print_unsigned(args));
 	else if (type == 'x' || type == 'X')
 		return (print_hex(args, type));
 	return (0);

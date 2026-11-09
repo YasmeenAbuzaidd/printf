@@ -28,7 +28,7 @@ static int	length(unsigned int num)
 	return (len);
 }
 
-char	*ft_utoa(unsigned int n)
+static char	*ft_utoa(unsigned int n)
 {
 	int				len;
 	unsigned int	num;
@@ -47,6 +47,20 @@ char	*ft_utoa(unsigned int n)
 	}
 	return (s);
 }
+
+int	print_unsigned(va_list args)
+{
+	char	*str;
+	int		count;
+
+	str = ft_utoa(va_arg(args, unsigned int));
+	if (!str)
+		return (-1);
+	count = write(1, str, ft_strlen(str));
+	free(str);
+	return (count);
+}
+
 /*
 #include <stdio.h>
 

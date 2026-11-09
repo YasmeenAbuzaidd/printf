@@ -21,6 +21,6 @@
 int		ft_printf(const char *format, ...);
 int		print_hex(va_list args, char type);
 int		print_ptr(void *ptr);
-char	*ft_utoa(unsigned int n);
+int	print_unsigned(va_list args);
 
 #endif
