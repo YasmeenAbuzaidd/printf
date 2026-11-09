@@ -17,7 +17,7 @@ static void    print_fun(char c)
 {
     write(1, &c, 1);
 }
-int    string_fun(char *c)
+static int    string_fun(char *c)
 {
     int i;
 
@@ -116,6 +116,7 @@ int ft_printf(const char *str, ...)
     va_end(args);
     return (count);
 }
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -124,4 +125,4 @@ int main(void)
     result = ft_printf("I got 100%%");;
     printf("\nReturn: %d\n", result);
     return (0);
-}
+}*/
