@@ -101,18 +101,12 @@ int	ft_printf(const char *str, ...)
 			if (str[i] == '\0')
 				break ;
 			if (str[i] == '%')
-			{
-				write(1, "%", 1);
-				count++;
-			}
+				count += write(1, "%", 1);
 			else
 				count += ft_type(args, str[i]);
 		}
 		else
-		{
-			count++;
-			write(1, &str[i], 1);
-		}
+			count += write(1, &str[i], 1);
 		i++;
 	}
 	va_end(args);
