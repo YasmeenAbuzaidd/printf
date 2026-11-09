@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 14:18:30 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/10/26 14:18:30 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 13:25:02 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 # include <stdlib.h>
 # include <stdint.h>
 
-int	ft_printf(const char *format, ...);
-char    *ft_hex(unsigned int num, char type);
-int	print_ptr(void *ptr);
+int		ft_printf(const char *format, ...);
+char	*ft_hex(unsigned int num, char type);
+int		print_ptr(void *ptr);
 char	*ft_utoa(unsigned int n);
 
 #endif

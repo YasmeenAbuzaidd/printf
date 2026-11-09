@@ -6,10 +6,9 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 12:28:07 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/11/08 12:28:07 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 13:25:27 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "ft_printf.h"
 
