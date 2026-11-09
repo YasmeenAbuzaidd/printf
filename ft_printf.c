@@ -68,13 +68,13 @@ static int ft_type(va_list args, char type)
         free(str);
         return (num);
     }
-    else if (type == 'x' || type =='X')
+    else if (type == 'x' || type == 'X')
     {
-        str = ft_hex(va_arg(args, unsigned int), type);\
+        str = ft_hex(va_arg(args, unsigned int), type);
         if (!str)
             return (-1);
-        num = string_fun (str);
-        free (str);
+        num = string_fun(str);
+        free(str);
         return (num);
     }
     return (0);
