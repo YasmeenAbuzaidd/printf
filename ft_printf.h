@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 14:18:30 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/11/09 14:19:20 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:22:43 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@
 int		ft_printf(const char *format, ...);
 int		print_hex(va_list args, char type);
 int		print_ptr(void *ptr);
-int	print_unsigned(va_list args);
+int		print_unsigned(va_list args);
 
 #endif

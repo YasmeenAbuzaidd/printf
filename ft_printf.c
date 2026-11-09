@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 14:19:40 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/11/09 14:18:31 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:22:14 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static	int	ft_type(va_list args, char type)
 		return (num);
 	}
 	else if (type == 'u')
-	return (print_unsigned(args));
+		return (print_unsigned(args));
 	else if (type == 'x' || type == 'X')
 		return (print_hex(args, type));
 	return (0);
