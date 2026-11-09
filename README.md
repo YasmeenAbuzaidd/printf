@@ -130,7 +130,7 @@ Variadic functions: https://www.geeksforgeeks.org/c/variadic-functions-in-c/
 
 uintptr_t: https://www.tutorialpedia.org/blog/what-is-the-uintptr-t-data-type/
 
-printf(): https://man7.org/linux/man-pages/man3/printf.3.html?utm_source=chatgpt.com
+printf(): [https://man7.org/linux/man-pages/man3/printf.3.com](https://man7.org/linux/man-pages/man3/printf.3.html?utm_source=chatgpt.com)
 
 ## AI Usage
 AI tools were used to help understand concepts, review code, and troubleshoot errors during development.
