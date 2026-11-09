@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 14:19:40 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/11/09 13:36:23 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:01:54 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,19 +81,20 @@ static	int	ft_type(va_list args, char type)
 	}
 	return (0);
 }
+
 static int	ft_check(const char *str, int *i, va_list args)
 {
 	int	count;
 
 	count = 0;
-    (*i)++;
-    if (str[*i] == '\0')
-        return (0);
-    if (str[*i] == '%')
-        count = write(1, "%", 1);
-    else
-        count = ft_type(args, str[*i]);
-    return (count);
+	(*i)++;
+	if (str[*i] == '\0')
+		return (0);
+	if (str[*i] == '%')
+		count = write(1, "%", 1);
+	else
+		count = ft_type(args, str[*i]);
+	return (count);
 }
 
 int	ft_printf(const char *str, ...)
@@ -110,7 +111,7 @@ int	ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if (str[i] == '%')
-			count +=  ft_check(str, &i, args);
+			count += ft_check(str, &i, args);
 		else
 			count += write(1, &str[i], 1);
 		i++;
