@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 14:19:40 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/11/09 14:01:54 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:18:31 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static	int	ft_type(va_list args, char type)
 	else if (type == 's')
 		return (string_fun(va_arg(args, char *)));
 	else if (type == 'p')
-	return (print_ptr(va_arg(args, void *)));
+		return (print_ptr(va_arg(args, void *)));
 	else if (type == 'd' || type == 'i')
 	{
 		str = ft_itoa(va_arg(args, int));
@@ -66,7 +66,7 @@ static	int	ft_type(va_list args, char type)
 		return (num);
 	}
 	else if (type == 'x' || type == 'X')
-	return (print_hex(args, type));
+		return (print_hex(args, type));
 	return (0);
 }
 

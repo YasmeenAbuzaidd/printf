@@ -6,7 +6,7 @@
 /*   By: yabuzaid <yabuzaid@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/08 12:28:07 by yabuzaid          #+#    #+#             */
-/*   Updated: 2026/11/09 13:25:27 by yabuzaid         ###   ########.fr       */
+/*   Updated: 2026/11/09 14:17:22 by yabuzaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static void	put_ptr(uintptr_t num)
 	else
 		write(1, &base[num], 1);
 }
+
 int	print_ptr(void *ptr)
 {
 	uintptr_t	address;
