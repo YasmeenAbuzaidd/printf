@@ -50,12 +50,7 @@ static	int	ft_type(va_list args, char type)
 	else if (type == 's')
 		return (string_fun(va_arg(args, char *)));
 	else if (type == 'p')
-	{
-		ptr = va_arg(args, void *);
-		if (ptr == NULL)
-			return (string_fun("(Nil)"));
-		return (string_fun(ptr));
-	}
+	return (print_ptr(va_arg(args, void *)));
 	else if (type == 'd' || type == 'i')
 	{
 		str = ft_itoa(va_arg(args, int));
@@ -71,14 +66,7 @@ static	int	ft_type(va_list args, char type)
 		return (num);
 	}
 	else if (type == 'x' || type == 'X')
-	{
-		str = ft_hex(va_arg(args, unsigned int), type);
-		if (!str)
-			return (-1);
-		num = string_fun(str);
-		free(str);
-		return (num);
-	}
+	return (print_hex(args, type));
 	return (0);
 }
 

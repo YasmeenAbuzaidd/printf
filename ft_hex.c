@@ -27,7 +27,7 @@ static int	hex_length(unsigned int num)
 	return (len);
 }
 
-char	*ft_hex(unsigned int num, char type)
+static char	*ft_hex(unsigned int num, char type)
 {
 	char	*str;
 	char	*base;
@@ -48,4 +48,17 @@ char	*ft_hex(unsigned int num, char type)
 		num /= 16;
 	}
 	return (str);
+}
+
+int	print_hex(va_list args, char type)
+{
+	char	*str;
+	int		count;
+
+	str = ft_hex(va_arg(args, unsigned int), type);
+	if (!str)
+		return (-1);
+	count = write(1, str, ft_strlen(str));
+	free(str);
+	return (count);
 }
