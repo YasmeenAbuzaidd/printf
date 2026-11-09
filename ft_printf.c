@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-static	void	print_fun(char c)
+static	void	char_fun(char c)
 {
 	write(1, &c, 1);
 }
@@ -30,7 +30,7 @@ static	int	string_fun(char *c)
 	}
 	while (c[i])
 	{
-		print_fun(c[i]);
+		char_fun(c[i]);
 		i++;
 	}
 	return (i);
@@ -44,7 +44,7 @@ static	int	ft_type(va_list args, char type)
 
 	if (type == 'c')
 	{
-		print_fun(va_arg(args, int));
+		char_fun(va_arg(args, int));
 		return (1);
 	}
 	else if (type == 's')
