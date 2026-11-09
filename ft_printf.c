@@ -39,7 +39,6 @@ static	int	string_fun(char *c)
 static	int	ft_type(va_list args, char type)
 {
 	char	*str;
-	void	*ptr;
 	int		num;
 
 	if (type == 'c')
