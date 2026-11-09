@@ -24,6 +24,10 @@ The function supports the following mandatory conversions:
 | `%X` | Prints an unsigned integer in uppercase hexadecimal format. |
 | `%%` | Prints a percent sign. |
 
+### Libft
+
+This project uses functions from my Libft library. The Libft source files are included in the `libft/` directory, and the Makefile compiles the library as part of the project.
+
 ### Algorithm
 
 The implementation follows a format-parsing approach:
@@ -41,7 +45,6 @@ This approach separates format parsing, argument handling, conversion, and outpu
 The project does not require complex data structures. It mainly uses:
 
 - **`va_list`:** Manages the variable arguments passed to `ft_printf()`.
-- **Character pointers (`char *`):** Store dynamically allocated strings generated during number conversions.
 - **`uintptr_t`:** Represents pointer addresses as an unsigned integer for hexadecimal conversion.
 
 The implementation uses separate conversion functions for unsigned decimal and hexadecimal numbers. Dynamically allocated strings are freed after printing to prevent memory leaks.
@@ -124,6 +127,10 @@ Run the program:
 The following resources were used to understand the concepts and tools involved in this project:
 
 Variadic functions: https://www.geeksforgeeks.org/c/variadic-functions-in-c/
+
+uintptr_t: https://www.tutorialpedia.org/blog/what-is-the-uintptr-t-data-type/
+
+printf(): https://man7.org/linux/man-pages/man3/printf.3.html?utm_source=chatgpt.com
 
 ## AI Usage
 AI tools were used to help understand concepts, review code, and troubleshoot errors during development.
