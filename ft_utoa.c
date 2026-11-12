@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
-#include <stdlib.h>
 
 static int	length(unsigned int num)
 {

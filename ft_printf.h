@@ -17,6 +17,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include "libft/libft.h"
 
 int		ft_printf(const char *format, ...);
 int		print_hex(va_list args, char type);
